@@ -10,6 +10,9 @@ class List:
     def __init__(self, node=None):
         self.head = node
 
+    def clear(self):
+        self.head = None
+
     def addToEnd(self, node):
         if self.head is None:
             self.head = node
@@ -35,9 +38,9 @@ class List:
     def __str__(self):
         if self.head != None:
             current = self.head
-            out = 'LinkedList [\n' + str(current.value) + '\n'
+            out =  str(current.value)+' '
             while current.next != None:
                 current = current.next
-                out += str(current.value) + '\n'
-            return out + ']'
-        return 'LinkedList []'
+                out += str(current.value) + " "
+            return out
+        return 'Список пуст'
