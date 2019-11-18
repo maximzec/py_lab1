@@ -15,3 +15,11 @@ class Queue():
         self.queue.pop(0)
         return element
 
+    def clear(self):
+        self.queue = []
+
+    def __str__(self):
+        out = ""
+        for e in self.queue:
+            out += str(e) + " "
+        return out
